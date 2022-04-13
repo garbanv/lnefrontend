@@ -26,7 +26,7 @@ console.log(user)
       <header>
         <div className="container mx-auto py-5 border-b">
           <img
-            src="http://nuevahope.org/wp-content/uploads/2018/01/la-nueva-2.png"
+            src="./logo.png"
             alt=""
             width={125}
           />
