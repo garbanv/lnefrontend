@@ -14,10 +14,10 @@ export default function EditAuthUserModal({selectedUser, setShowEditAuthUserModa
   })
 
   const [saving,setSaving] = useState(false)
-  console.log("updated user",userData)
-  const EditUser =  (user)=> {
 
-   axios.put(`${process.env.SERVER_URL}/authorizedusers`,userData)
+  const EditUser =  (user)=> {
+ 
+   axios.put(`${process.env.NEXT_PUBLIC_SERVER_URL}/authorizedusers`,userData)
     .then(function (response) {
         setShowEditAuthUserModal(!showEditAuthUserModal)
       router.reload()
@@ -150,7 +150,7 @@ export default function EditAuthUserModal({selectedUser, setShowEditAuthUserModa
                   </button>
                   <button
                     className="px-5  font-medium bg-black  text-sm text-white flex shadow-xl items-center rounded-md"
-                    onClick={() => setShowEditUserModal(!showEditUserModal)}
+                    onClick={() => setShowEditAuthUserModal(!showEditAuthUserModal)}
                   >
                     <svg
                       className="mr-1 relative "

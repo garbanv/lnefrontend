@@ -16,7 +16,7 @@ export default function AddUserModal({ showModal, setShowModal }) {
   const [saving,setSaving] = useState(false)
 
   const addUser =  ()=> {process.env.DB_HOST
-     axios.post(`${process.env.SERVER_URL}/authorizedusers/create`,userData)
+     axios.post(`${process.env.NEXT_PUBLIC_SERVER_URL}/authorizedusers/create`,userData)
     .then(function (response) {
       setShowModal(!showModal)
       router.reload()

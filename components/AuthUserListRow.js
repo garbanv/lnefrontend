@@ -7,19 +7,18 @@ export default function AuthUserListRow({authorizeduser,setShowEditAuthUserModal
   const {email,name,lastname,userrole,isactive,datelastlogin,id,dateaccountactivated} = authorizeduser
   const router = useRouter()
 
-  console.log(authorizeduser)
 
   const handleSelectedUser =(selectedUser)=>{
     
     setSelectedUser(authorizeduser)
     setShowEditAuthUserModal(!showEditAuthUserModal)
-    console.log("selectedUser",selectedUser)
+ 
   }
 
   const handleAuthUserDelete = (id)=>{
 
 
-    axios.delete(`${process.env.SERVER_URL}/authorizedusers/`,{data:{id}})
+    axios.delete(`${process.env.NEXT_PUBLIC_SERVER_URL}/authorizedusers/`,{data:{id}})
     .then(response=>{
       router.reload()
     })

@@ -141,6 +141,6 @@ input:checked ~ .dot {
   background-color: var(--yellow);
 }
 
-.red {
-  max-width:1px;
+.btn-lightBlue {
+  background-color: var(--lightBlue);
 }

@@ -19,7 +19,7 @@ export default function UserListRow({authorizeduser,setShowEditUserModal,showEdi
 
   const handleAuthUserDelete = (id)=>{
 
-    axios.delete(`${process.env.SERVER_URL}/users/`,{data:{id}})
+    axios.delete(`${process.env.NEXT_PUBLIC_SERVER_URL}/users/`,{data:{id}})
     .then(response=>{
       router.reload()
     })

@@ -9,7 +9,7 @@ export default function AuhtUsersListRow({authorizeduser,index}) {
 
   const handleAuthUserDelete = (id)=>{
 
-    axios.delete(`${process.env.SERVER_URL}/authorizedusers/`,{data:{id}})
+    axios.delete(`http://lanuevatest.herokuapp.com/authorizedusers/`,{data:{id}})
     .then(response=>{
       router.reload()
     })

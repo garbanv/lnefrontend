@@ -36,7 +36,7 @@ console.log(user)
         <div className="container mx-auto h-screen grid justify-center content-center">
           <div className="text-center">
         <h1 className="font-black mb-5">Welcome!</h1>
-        <Link href="/dashboard" ><p className={`${styles.btnIndexPage} btn bg-red-500 text-black px-5 py-2 rounded-md test cursor-pointer`}>Login / Register</p></Link>
+        <Link href="/dashboard" ><p className={`${styles.btnIndexPage} btn bg-yellow-300 text-black px-5 py-2 rounded-md test cursor-pointer`}>Login / Register</p></Link>
         {user && <h3 className="my-5 font-black">{user.name}</h3>}
         </div>
         </div>

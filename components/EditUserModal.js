@@ -17,7 +17,7 @@ export default function EditUserModal({selectedUser, setShowEditUserModal, showE
 
   const EditUser =  (user)=> {
    console.log("updated user",userData)
-   axios.put(`${process.env.SERVER_URL}/users`,userData)
+   axios.put(`${process.env.NEXT_PUBLIC_SERVER_URL}/users`,userData)
     .then(function (response) {
         setShowEditUserModal(!showEditUserModal)
       router.reload()

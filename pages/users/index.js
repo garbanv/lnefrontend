@@ -21,7 +21,7 @@ export default function UsersIndex({data}) {
     <header className="border-b">
         <div className="container mx-auto py-5  grid space-between grid-cols-2">
           <img
-            src="http://nuevahope.org/wp-content/uploads/2018/01/la-nueva-2.png"
+            src="./logo.png"
             alt=""
             width={125}
           />
@@ -34,9 +34,10 @@ export default function UsersIndex({data}) {
             </h6>
             <Link
               href="/api/auth/logout"
-              className={`${styles.btnIndexPage} inline-block  btn-index-page text-black px-5 py-2 rounded-md`}
+              
             >
-              Logout
+          <a className={`${styles.btnIndexPage} inline-block btn-index-page text-black px-3 py-0 rounded-md`}>Logout</a>
+
             </Link>
           </div>
         </div>
@@ -47,24 +48,20 @@ export default function UsersIndex({data}) {
 
            <div className="flex my-5">
               <Link href="/dashboard">
-              <button className="rounded bg-gray-100 px-5 py-2 flex shadow-xl inline-block mr-1" id="myBtn">
-              <svg width="24" height="24" strokeWidth="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18.5 12H6M6 12L12 6M6 12L12 18" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-
-              {" "}
-       
+              <button className="rounded btn-lightBlue px-5 py-2 flex shadow-xl inline-block mr-1" id="myBtn">
+           
+       Dashboard
               </button>
               </Link>
               <Link href="/authorizedusers">
-              <button className="rounded bg-gray-100 px-5 py-2 flex shadow-xl inline-block mr-1" id="myBtn">
+              <button className="rounded btn-lightBlue px-5 py-2 flex shadow-xl inline-block mr-1" id="myBtn">
               Authorized Users 
 
               {" "}
        
               </button>
               </Link>
-              {/* <button className="rounded bg-gray-100 px-5 py-2 flex shadow-xl inline-block" id="myBtn" onClick={()=>setShowModal(!showModal)}>
+              {/* <button className="rounded btn-lightBlue px-5 py-2 flex shadow-xl inline-block" id="myBtn" onClick={()=>setShowModal(!showModal)}>
                 <svg
                   className="mr-2"
                   width="24"
